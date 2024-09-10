@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase NFT - NFT Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for the purchase page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .purchase-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 5% auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .purchase-container h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+        .purchase-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .purchase-container p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .purchase-container .price {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .purchase-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        .purchase-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .purchase-container button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .purchase-container button:hover {
+            background-color: #0056b3;
+        }
+        .purchase-container .actions {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .purchase-container .actions a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .purchase-container .actions a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">NFT Marketplace</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="artwork.html">Add Artwork</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="purchase-container">
+            <h2>Purchase NFT</h2>
+            <img src="trees/ladki.jpeg" alt="Lord Shiva Artwork">
+            <p><strong>Title:</strong> sunder kanya</p>
+            <p><strong>Artist:</strong> aniket</p>
+            <p><strong>Description:</strong> A beautifully crafted digital artwork representing Lord Shiva, capturing the essence of divine power and grace.</p>
+            <p class="price">Price: 5.5 ETH</p>
+
+            <form action="purchase_process.php" method="POST">
+                <label for="buyer-name">Name</label>
+                <input type="text" id="buyer-name" name="buyer_name" required placeholder="Enter your full name">
+
+                <label for="buyer-email">Email</label>
+                <input type="email" id="buyer-email" name="buyer_email" required placeholder="Enter your email address">
+
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment_method" required>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="credit-card">Credit Card</option>
+                </select>
+
+                <button type="submit">Confirm Purchase</button>
+            </form>
+
+            <div class="actions">
+                <a href="view1.html">Back to Details</a>
+                <a href="listings.html">Back to Listings</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NFT Marketplace. All rights reserved.</p>
+    </footer>
+</body>
+</html>

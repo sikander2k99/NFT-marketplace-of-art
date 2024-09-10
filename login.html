@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NFT Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for the login page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 5% auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container .error-message {
+            color: red;
+            margin-bottom: 20px;
+        }
+        .login-container p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-container p a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .login-container p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">NFT Marketplace</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="artwork.html">Add Artwork</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+                <li><a href="register.html">Register.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <h2>Login</h2>
+            <form action="login_process.php" method="POST">
+                <div class="error-message">
+                    <!-- Display error messages here -->
+                </div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                
+                <button type="submit"><li><a href="index.html">Login</a></li></button>
+
+                <p>Don't have an account? <a href="register.html">Register here</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NFT Marketplace. All rights reserved.</p>
+    </footer>
+</body>
+</html>
